@@ -153,39 +153,52 @@ namespace MiProyecto.App
 
 
             //Ejercicio 9
-            Console.WriteLine("ingresa la capacidad del camion (Litros)");
-            float capacidadCamion = float.Parse(Console.ReadLine());
-            float capacidad = 0;
-            int numeroSaco = 1;
-            bool continuar = true;
-            while (continuar)
-            {
+            //Console.WriteLine("ingresa la capacidad del camion (Litros)");
+            //float capacidadCamion = float.Parse(Console.ReadLine());
+            //float capacidad = 0;
+            //int numeroSaco = 1;
+            //bool continuar = true;
+            //while (continuar)
+            //{
 
-               if (capacidadCamion < 3000)
-               {
-                    Console.WriteLine("No se pueden agregar mas sacos, ningun saco puede cumplir la capacidad minima ");
-                   continuar = false;
-               }
-                Console.WriteLine($"ingresa la capacidad del saco #{numeroSaco} (Litros)");
-               float saco = float.Parse(Console.ReadLine());
-                
-               if ((capacidad + saco) > capacidadCamion)
-               {
-                    Console.WriteLine("este saco excede el limite del camion");
-                   continuar = false;
-               }
-               else
-               {
-                   capacidad += saco;
-               }
-                
-            }
-            Console.WriteLine("no puedes agregar mas sacos, despache el camion ");
+            //   if (capacidadCamion < 3000)
+            //   {
+            //        Console.WriteLine("No se pueden agregar mas sacos, ningun saco puede cumplir la capacidad minima ");
+            //       continuar = false;
+            //   }
+            //    Console.WriteLine($"ingresa la capacidad del saco #{numeroSaco} (Litros)");
+            //   float saco = float.Parse(Console.ReadLine());
 
+            //   if ((capacidad + saco) > capacidadCamion)
+            //   {
+            //        Console.WriteLine("este saco excede el limite del camion");
+            //       continuar = false;
+            //   }
+            //   else
+            //   {
+            //       capacidad += saco;
+            //   }
 
+            //}
+            //Console.WriteLine("no puedes agregar mas sacos, despache el camion ");
 
 
+            Mascota mascota1 = new Mascota();
+            Mascota mascota2 = new Mascota();
 
+            mascota1.EstablecerNombre("firulais");
+            mascota1.EstablecerEdad(4);
+            mascota1.EstablecerTipo("perro");
+            mascota1.EstablecerPeso(12.5);
+            mascota1.MostrarInfo();
+            mascota1.CalcularEdad();
+
+            mascota2.EstablecerNombre("michi");
+            mascota2.EstablecerEdad(3);
+            mascota2.EstablecerTipo("gato");
+            mascota2.EstablecerPeso(4.3);
+            mascota2.MostrarInfo();
+            mascota2.CalcularEdad();
 
         }
     }
